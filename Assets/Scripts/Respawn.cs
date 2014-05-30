@@ -23,6 +23,7 @@ public class Respawn : MonoBehaviour {
 
 		if(other.tag.Equals("Player")) {
 			other.gameObject.transform.position = playerPos;
+			Physics2D.gravity = new Vector2(0, -9.81f);
 		}
 	}
 }
