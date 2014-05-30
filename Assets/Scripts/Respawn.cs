@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Respawn : MonoBehaviour {
-
+	static int deaths = 0;
 	public Transform player;
 
 	private Vector3 playerPos;
@@ -23,6 +23,7 @@ public class Respawn : MonoBehaviour {
 
 		if(other.tag.Equals("Player")) {
 			other.gameObject.transform.position = playerPos;
+			deaths++;
 		}
 	}
 }
