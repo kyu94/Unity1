@@ -15,7 +15,7 @@ public class StartClickHandler : MonoBehaviour {
 			Collider2D hitCollider = Physics2D.OverlapPoint(mousePosition);
 
 			if (hitCollider) {
-//				Application.LoadLevel("main menu");
+				Application.LoadLevel("level1");
 			}
 		}
 	}
