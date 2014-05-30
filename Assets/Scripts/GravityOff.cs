@@ -2,7 +2,6 @@
 using System.Collections;
 
 public class GravityOff : MonoBehaviour {
-	
 	// Use this for initialization
 	void Start () {
 	
@@ -16,9 +15,8 @@ public class GravityOff : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 
 		if (other.tag == "Player") {
-
-			Physics2D.gravity = new Vector2(0, -2f);
-
+			other.gameObject.GetComponent<PlatformerCharacter2D>().isInZeroGRoom = true;
+			Physics2D.gravity = new Vector2(0, -.5f);
 		}
 
 	}

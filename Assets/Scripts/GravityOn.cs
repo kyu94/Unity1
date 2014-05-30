@@ -17,9 +17,8 @@ public class GravityOn : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		
 		if (other.tag == "Player") {
-			
+			other.gameObject.GetComponent<PlatformerCharacter2D>().isInZeroGRoom = false;
 			Physics2D.gravity = new Vector2(0, -9.81f);
-			
 		}
 		
 	}
