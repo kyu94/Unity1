@@ -24,6 +24,7 @@ public class Respawn : MonoBehaviour {
 		if(other.tag.Equals("Player")) {
 			other.gameObject.transform.position = playerPos;
 			deaths++;
+			Debug.Log(deaths);
 		}
 	}
 }
